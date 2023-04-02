@@ -1,5 +1,9 @@
 .sidebar {
-  flex: 0.2;
+  width: 20%;
+}
+
+.sidebar.shrinked {
+  width: 4%;
 }
 
 .sidebar > hr {

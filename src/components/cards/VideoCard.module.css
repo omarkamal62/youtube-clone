@@ -1,11 +1,13 @@
 .videoCard {
   width: 270px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .videoCard__thumbnail {
   height: 140px;
   width: 250px;
+  border-radius: 12px;
 }
 
 .videoCard__info {

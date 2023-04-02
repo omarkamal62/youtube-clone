@@ -8,14 +8,24 @@ import Avatar from "@material-ui/core/Avatar/Avatar";
 import classes from "./Header.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui";
 
-const Header = () => {
+const Header = (props) => {
   const [inputSearch, setInputSearch] = useState("");
+  const dispatch = useDispatch();
+
+  const menuClickedHandler = () => {
+    dispatch(uiActions.toggleMenu());
+  };
 
   return (
     <div className={classes.header}>
       <div className={classes.header__left}>
-        <MenuIcon />
+        <MenuIcon
+          onClick={menuClickedHandler}
+          className={classes.header__menuIcon}
+        />
         <Link to="/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg"
@@ -34,8 +44,11 @@ const Header = () => {
           type="text"
           placeholder="Search"
         />
-        <Link to={`/search/${inputSearch}`}>
-          <SearchIcon className={classes.header__inputButton} />
+        <Link
+          className={classes.header__inputButton}
+          to={`/search/${inputSearch}`}
+        >
+          <SearchIcon />
         </Link>
       </div>
 

@@ -3,5 +3,9 @@
 }
 
 main {
-  flex: 0.8;
+  width: 80%;
+}
+
+main.shrinked {
+  width: calc(100% - 4%);
 }

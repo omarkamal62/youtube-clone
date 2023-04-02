@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   width: 70%;
+  cursor: pointer;
 }
 
 .channelRow__text {

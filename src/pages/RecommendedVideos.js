@@ -132,9 +132,10 @@ const RecommendedVideos = () => {
     <div className={classes.recommendedVideos}>
       <h2>Recommended</h2>
       <div className={classes.recommendedVideos__videos}>
-        {VIDEOS.map((vid) => {
+        {VIDEOS.map((vid, idx) => {
           return (
             <VideoCard
+              key={idx}
               title={vid.title}
               views={vid.views}
               timestamp={vid.timestamp}

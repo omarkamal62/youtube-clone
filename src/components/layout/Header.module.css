@@ -19,7 +19,9 @@
   display: flex;
   align-items: center;
   width: 40%;
-  border: 1px solid black;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 35px;
 }
 
 input:focus {
@@ -29,6 +31,8 @@ input:focus {
 .header__input > input {
   flex: 1;
   border: none;
+  padding-left: 10px;
+  border-radius: 20px;
 }
 
 .header__inputButton {
@@ -36,6 +40,12 @@ input:focus {
   background-color: #fafafa;
   border-left: 1px solid lightgray;
   color: gray;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
 }
 
 .header__icons {
@@ -45,4 +55,8 @@ input:focus {
 
 .header__icon {
   margin-right: 8px;
+}
+
+.header__menuIcon {
+  cursor: pointer;
 }

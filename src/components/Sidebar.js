@@ -13,9 +13,15 @@ import {
   WatchLater,
 } from "@material-ui/icons";
 
+import { useSelector } from "react-redux";
+
 const Sidebar = () => {
+  const menuExpansion = useSelector((state) => state.ui.menuExpansion);
+
   return (
-    <div className={classes.sidebar}>
+    <div
+      className={`${classes.sidebar} ${!menuExpansion ? classes.shrinked : ""}`}
+    >
       <SidebarRow selected Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={WhatshotIcon} title="Trending" />
       <SidebarRow Icon={SubscriptionsIcon} title="Subscription" />
